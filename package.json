@@ -1,7 +1,7 @@
 {
   "name": "wineandcheesemap",
   "version": "1.0.0",
-  "description": "A wine and cheese visualisation app",
+  "description": "NEs and NPs visualisation app",
   "main": "none",
   "browserslist": [
     "defaults"
@@ -12,12 +12,12 @@
   "scripts": {
     "clean": "rimraf dist",
     "prod": "cross-env NODE_ENV=production run-s build",
-    "build": "run-s build:*",
-    "watch": "run-p watch:*",
+    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && run-s build:*",
+    "watch": "export SET NODE_OPTIONS=--openssl-legacy-provider && run-p watch:*",
     "watch:livereload": "livereload 'dist, index.html' -w 1000",
     "watch:http": "http-server .",
-    "build:js": "webpack",
-    "watch:js": "webpack --watch",
+    "build:js": "export SET NODE_OPTIONS=--openssl-legacy-provider && webpack",
+    "watch:js": "export SET NODE_OPTIONS=--openssl-legacy-provider && webpack --watch",
     "build:css": "postcss         src/styles/index.css -o dist/bundle.css",
     "watch:css": "postcss --watch src/styles/index.css -o dist/bundle.css",
     "lint": "run-s lint:*",
@@ -30,10 +30,6 @@
   },
   "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cytoscape/wineandcheesemap/issues"
-  },
-  "homepage": "https://github.com/cytoscape/wineandcheesemap#readme",
   "devDependencies": {
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",

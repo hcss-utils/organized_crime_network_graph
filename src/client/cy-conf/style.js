@@ -8,16 +8,16 @@ edge {
 	curve-style: haystack;
 	haystack-radius: 0;
 	opacity: 0.333;
-	width: 2;
+	width: data(width);
 	z-index: 0;
 	overlay-opacity: 0;
   events: no;
 }
 
 node {
-	width: 40;
-	height: 40;
-	font-size: 9;
+	width: data(Strength);
+	height: data(Strength);
+	font-size: data(FontSize);
 	font-weight: bold;
 	min-zoomed-font-size: 4;
 	label: data(name);
@@ -33,32 +33,21 @@ node {
 	overlay-color: #fff;
 }
 
-edge[interaction = "cc"] {
-	line-color: #FACD37;
-	opacity: 0.666;
-	z-index: 9;
-	width: 4;
-}
-
-node[NodeType = "Cheese"],
-node[NodeType = "CheeseType"] {
+node[NodeType = "NP"] {
 	background-color: #FACD37;
 	text-outline-color: #FACD37;
 }
 
-node[NodeType = "Cheese"][Quality],
-node[NodeType = "CheeseType"][Quality] {
-	width: mapData(Quality, 70, 100, 20, 50);
-	height: mapData(Quality, 70, 100, 20, 50);
+edge[interaction = "red"] {
+	line-color: red;
 }
 
-node[NodeType = "WhiteWine"] {
-	background-color: white;
-	text-outline-color: white;
+edge[interaction = "green"] {
+	line-color: green;
 }
 
-edge[interaction = "cw"] {
-	line-color: white;
+edge[interaction = "yellow"] {
+	line-color: yellow;
 }
 
 node[NodeType = "RedWine"] {
@@ -66,18 +55,29 @@ node[NodeType = "RedWine"] {
 	text-outline-color: #DE3128;
 }
 
-edge[interaction = "cr"] {
-	line-color: #DE3128;
+node[NodeType = "PERSON"] {
+	background-color: #DE3128;
+	text-outline-color: #DE3128;
 }
 
-node[NodeType = "Cider"] {
-	background-color: #A4EB34;
-	text-outline-color: #A4EB34;
+node[NodeType = "ORG"] {
+	background-color: white;
+	text-outline-color: white;
+}
+
+node[NodeType = "GPE"] {
+	background-color: #3498db;
+	text-outline-color: #3498db;
+}
+
+node[NodeType = "NORP"] {
+	background-color: #9b59b6;
+	text-outline-color: #9b59b6;
 }
 
 node.highlighted {
-	min-zoomed-font-size: 0;
-  z-index: 9999;
+    min-zoomed-font-size: 0;
+    z-index: 9999;
 }
 
 edge.highlighted {
