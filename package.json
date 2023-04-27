@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cytoscape/wineandcheesemap.git"
+    "url": "git+https://github.com/hcss-utils/organized_crime_network_graph.git"
   },
   "author": "",
   "license": "MIT",
