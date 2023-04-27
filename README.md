@@ -1,4 +1,4 @@
-# Wine & Cheese Map
+# GB NEs and NPs map
 
 This is an app to view NEs and NPs in GB Organized Crime Corpus pairings through a Cytoscape.js visualisation.
 
