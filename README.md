@@ -2,7 +2,7 @@
 
 This is an app to view NEs and NPs in GB Organized Crime Corpus pairings through a Cytoscape.js visualisation.
 
-This code includes parts Cytoscape.js-powered demo app at https://github.com/cytoscape/wineandcheesemap (repository is MIT-licensed, like Cytoscape.js itself.)
+This code includes parts of Cytoscape.js-powered demo app at https://github.com/cytoscape/wineandcheesemap (repository is MIT-licensed, like Cytoscape.js itself.)
 
 )
 
